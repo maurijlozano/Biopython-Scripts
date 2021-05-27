@@ -32,9 +32,9 @@ def parseArgs():
 	Argument parser.
 	'''
 	parser = argparse.ArgumentParser(description='NCBI_Assembly_downloader is a program designed to download genome sequences from NCBI Assembly database using Entrez Biopython module..')
-	parser.add_argument("-a", "--Assemblies",help="Accession numbers for the assemblies to download from NCBI.", dest="assemblies", action='append', nargs='+', required=False)
+	parser.add_argument("-a", "--Assemblies",help="Accession numbers for the assemblies to download from NCBI.", dest="assemblies", action='append', nargs='+', required=True)
 	parser.add_argument("-o", "--OutputDir",help="Output folder.",action="store", dest="path", required=False)
-	parser.add_argument("-e", "--email",help="User email. Required for accession number download mode.",action="store", dest="yourEmail", required=False)
+	parser.add_argument("-e", "--email",help="User email. Required for accession number download mode.",action="store", dest="yourEmail", required=True)
 	#
 	args = parser.parse_args()
 	return args
